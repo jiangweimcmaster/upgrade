@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "639502b9-3654-4afe-a230-c95042879c4a",
+		"name": "upgrade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/booking/status?startDate=2021-02-01&endDate=2021-02-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"booking",
+						"status"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2021-02-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2021-02-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reserve",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Jiang\",\r\n    \"email\" : \"jiang@jiang.com\",\r\n    \"startDate\" : \"2021-02-04\",\r\n    \"endDate\" : \"2021-02-06\" \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/booking/reserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"booking",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Jiang\",\r\n    \"email\" : \"jiang@jiang.com\",\r\n    \"startDate\" : \"2021-02-10\",\r\n    \"endDate\" : \"2021-02-11\" \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/booking/change?id=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"booking",
+						"change"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Jiang\",\r\n    \"email\" : \"jiang@jiang.com\",\r\n    \"startDate\" : \"2021-01-25\",\r\n    \"endDate\" : \"2021-01-27\" \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/booking/cancel?id=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"booking",
+						"cancel"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
